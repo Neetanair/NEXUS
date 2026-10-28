@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 
 export async function submitCheckIn(text: string) {
   const response = await fetch(`${API_URL}/check-in`, {
@@ -129,7 +129,7 @@ export async function approveRecommendation(
 
 export async function getMemories() {
   const response = await fetch(
-    "http://127.0.0.1:8000/memories"
+    `${API_URL}/memories`
   );
 
   if (!response.ok) {

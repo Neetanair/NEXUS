@@ -4,3 +4,4 @@ openai
 python-dotenv
 pydantic
 sqlalchemy
+psycopg[binary]
